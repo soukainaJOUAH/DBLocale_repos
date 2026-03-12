@@ -6,7 +6,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.edit
 
 class SharedPreferencesActivity : AppCompatActivity() {
 
@@ -27,10 +26,9 @@ class SharedPreferencesActivity : AppCompatActivity() {
             val name = editTextName.text.toString()
 
             val sharedPreferences = getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE)
-            sharedPreferences.edit {
-
-                putString(nameKey, name)
-            }
+            val editor = sharedPreferences.edit()
+            editor.putString(nameKey, name)
+            editor.apply()
         }
 
         // Load name
