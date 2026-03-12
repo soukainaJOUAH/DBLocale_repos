@@ -12,6 +12,9 @@ class SQLiteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sqlite)
 
+        // Enable back button
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val editTextUser = findViewById<EditText>(R.id.editTextUser)
         val buttonAddUser = findViewById<Button>(R.id.buttonAddUser)
         val buttonShowUsers = findViewById<Button>(R.id.buttonShowUsers)

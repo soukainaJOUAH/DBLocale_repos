@@ -3,18 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:padding="24dp">
 
     <Button
         android:id="@+id/buttonShared"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Open Shared Preferences" />
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Shared Preferences"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
 
     <Button
         android:id="@+id/buttonSQLite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Open SQLite" />
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="SQLite Database"
+        android:textSize="16sp" />
 
 </LinearLayout>

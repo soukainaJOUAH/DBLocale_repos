@@ -14,6 +14,9 @@ class SharedPreferencesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared)
 
+        // Enable back button
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val editTextName = findViewById<EditText>(R.id.editTextName)
         val buttonSave = findViewById<Button>(R.id.buttonSave)
         val buttonLoad = findViewById<Button>(R.id.buttonLoad)

@@ -28,14 +28,16 @@
         <activity
             android:name=".SharedPreferencesActivity"
             android:exported="false"
-            android:label="SharedPreferences Example"
+            android:label="Shared Preferences"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.MyKotlin" />
 
         <!-- SQLite Activity -->
         <activity
             android:name=".SQLiteActivity"
             android:exported="false"
-            android:label="SQLite Example"
+            android:label="SQLite Database"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.MyKotlin" />
 
     </application>
