@@ -39,9 +39,12 @@ class DatabaseHelper(context: Context) :
         val result = StringBuilder()
 
         if (cursor.moveToFirst()) {
+            val idIndex = cursor.getColumnIndexOrThrow("id")
+            val nameIndex = cursor.getColumnIndexOrThrow("name")
+
             do {
-                val id = cursor.getInt(0)
-                val name = cursor.getString(1)
+                val id = cursor.getInt(idIndex)
+                val name = cursor.getString(nameIndex)
 
                 result.append("$id - $name\n")
 
